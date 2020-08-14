@@ -1,12 +1,79 @@
+<!doctype html>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tony_Liu</title>
+    <title>汤姆的私人AI实验室</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <style>
+        h3{
+            position:fixed!important;
+            top:10vw;
+            left:0;
+            text-align: center;
+        }
+        #message{
+            margin:10vw 0 0 0;
+            padding:10vw 5vw;
+        }
+        .card {
+            margin: 3vw auto;
+        }
+        footer{ position:fixed!important; bottom:15px; left:0; }
+        .container{ overflow-y: scroll; }
+    </style>
 </head>
 <body>
-    <h1>Hello World！！！</h1>
+<div class="container">
+    <div class="row">
+        <h3 class="col-12">汤姆的私人AI实验室</h3>
+        <div id="message" class="col-12"></div>
+        <footer class="col-12">
+            <div class="row">
+                <div class="col-9">
+                    <input id="message-input" type="text" placeholder="输入你想说的话" class="form-control">
+                </div>
+                <div class="col-3">
+                    <button id="send" type="button" class="btn btn-primary">发送</button>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+<script>
+    $(document).on('click','#send',function () {
+        let send_info = $('#message-input');
+
+        if(send_info.val() === ''){
+            alert('汤姆大大提示：输入不能为空');
+            return false;
+        } else {
+            $('#message').append('<div class="card"><div class="card-body">我: '+send_info.val()+'</div></div>');
+            $.ajax({
+                url: "http://i.itpk.cn/api.php?question="+send_info.val()+'&api_key=98284b8417dd4090fccc13291f720cc1&api_secret=59zobasyf1ez&limit=8',
+                type: 'GET',
+                success: function(data){
+                    if(data.indexOf('{') === -1) {
+                        $('#message').append('<div class="card"><div class="card-body"><b>001号试验品:</b><br> '+ data +'</div></div>');
+                    } else {
+                        data = JSON.parse(data);
+                        $('#message').append('<div class="card"><div class="card-body"><b>001号试验品:</b> <br>'+data.title+'<br/>'+ data.content +'</div></div>');
+                    }
+                    console.log(data)
+                    send_info.val('');
+                    $(document).scrollTop($(document).height()-$(window).height());
+                },
+                error: function () {
+                    alert('服务器错误');
+                }
+            });
+        }
+
+    });
+</script>
 </body>
 </html>
