@@ -54,7 +54,7 @@
         } else {
             $('#message').append('<div class="card"><div class="card-body">我: '+send_info.val()+'</div></div>');
             $.ajax({
-                url: "http://i.itpk.cn/api.php?question="+send_info.val()+'&api_key=98284b8417dd4090fccc13291f720cc1&api_secret=59zobasyf1ez&limit=8',
+                url: "https://i.itpk.cn/api.php?question="+send_info.val()+'&api_key=98284b8417dd4090fccc13291f720cc1&api_secret=59zobasyf1ez&limit=8',
                 type: 'GET',
                 success: function(data){
                     if(data.indexOf('{') === -1) {
