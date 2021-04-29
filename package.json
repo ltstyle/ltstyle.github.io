@@ -1,0 +1,20 @@
+{
+  "name": "formverify",
+  "version": "1.0.5",
+  "description": "表单验证插件",
+  "main": "index.html",
+  "scripts": {
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tony_liu",
+  "license": "ISC",
+  "devDependencies": {
+    "terser-webpack-plugin": "^2.3.1",
+    "uglifyjs-webpack-plugin": "^1.0.0-rc.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {},
+  "keywords": []
+}

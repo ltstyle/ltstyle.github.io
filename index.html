@@ -1,131 +1,637 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>汤姆的私密实验室-压扁小鸟小游戏</title>
-<meta name="description" content="你恨 flappy bird 吗?你每天晚上对着那个愚蠢的鸟做噩梦吗？ 压扁它们！.">
-<meta property="og:description" content="你恨 flappy bird 吗?你每天晚上对着那个愚蠢的鸟做噩梦吗？ 压扁它们！.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Squishy Bird">
-<meta property="og:site_name" content="Squishy Birds">
-<meta name="viewport" content="user-scalable=no, initial-scale=0.5, width=610, height=1024">
-</head>
-<body style="margin: 0px; overflow: hidden;-moz-user-select: none;-webkit-user-select: none;user-select: none;">
-<div id="lgd" style="width: 300px; height: 64px; position: absolute; left: 533px; top: 301px; font-family: Verdana; font-size: 16px; font-weight: bold; text-align: center;">Loading...</div>
-<script type="text/javascript" src="js/squishybird.js"></script>
-<div style="overflow: hidden; position: relative; width: 1366px; height: 620px;">
-<canvas width="1366" height="620"></canvas>
-<img src="img/pipe1.png" width="148" height="1664" style="position: absolute; left: 609px; top: -1533px; z-index: 420;"><img src="img/pipe2.png" width="148" height="1664" style="position: absolute; left: 609px; top: 400.9999999999999px; z-index: 420;">
-<canvas width="1366" height="88" style="position: absolute; z-index: 31337; left: 0px; top: 532px;"></canvas>
-<canvas width="1366" height="256" style="position: absolute; z-index: 60; left: 0px; top: 276px;"></canvas>
-<canvas width="1366" height="216" style="position: absolute; z-index: 61; left: 0px; top: 316px;"></canvas>
-<img src="img/logo.png" style="position: absolute; opacity: 0; z-index: 42069; left: 370px; top: 174px; display: none;"><img src="img/gameover.png" style="position: absolute; opacity: 1; z-index: 42069; left: 370px; top: 93px; display: inline;"><img src="img/clicktostart.png" style="position: absolute; opacity: 0; z-index: 42070; left: 514px; top: 435px; display: none;">
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 536px; top: 23px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 536px; top: 22px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 536px; top: 21px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 536px; top: 20px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 536px; top: 19px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 536px; top: 18px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 536px; top: 17px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 535px; top: 23px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 535px; top: 22px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 535px; top: 21px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 535px; top: 20px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 535px; top: 19px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 535px; top: 18px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 535px; top: 17px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 534px; top: 23px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 534px; top: 22px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 534px; top: 21px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 534px; top: 20px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 534px; top: 19px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 534px; top: 18px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 534px; top: 17px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 533px; top: 23px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 533px; top: 22px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 533px; top: 21px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(255, 255, 255); z-index: 88888; -webkit-user-select: none; left: 533px; top: 20px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 533px; top: 19px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 533px; top: 18px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 533px; top: 17px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 532px; top: 23px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 532px; top: 22px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 532px; top: 21px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 532px; top: 20px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 532px; top: 19px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 532px; top: 18px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 532px; top: 17px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 531px; top: 23px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 531px; top: 22px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 531px; top: 21px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 531px; top: 20px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 531px; top: 19px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 531px; top: 18px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 531px; top: 17px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 530px; top: 23px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 530px; top: 22px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 530px; top: 21px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 530px; top: 20px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 530px; top: 19px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 530px; top: 18px;">0</div>
-<div style="width: 300px; height: 50px; position: absolute; text-align: center; font-family: Verdana; font-weight: bold; font-size: 30px; color: rgb(0, 0, 0); z-index: 88887; -webkit-user-select: none; left: 530px; top: 17px;">0</div>
-<canvas width="150" height="150" style="z-index: 69; position: absolute; left: 880.7973799593747px; top: 288.1699138371274px;"></canvas>
-<canvas width="150" height="150" style="z-index: 69; position: absolute; left: 94.18296936130267px; top: 175.22475277371694px;"></canvas>
-<canvas width="150" height="150" style="z-index: 69; position: absolute; left: 147.39346598794316px; top: 196.6628938429057px;"></canvas>
-<canvas width="150" height="150" style="z-index: 69; position: absolute; left: -235.79706690685066px; top: -486.7269952782424px;"></canvas>
-</div>
-<audio src="re/flap.wav"></audio>
-<audio src="re/flap.wav"></audio>
-<audio src="re/flap.wav"></audio>
-<audio src="re/flap.wav"></audio>
-<audio src="re/flap.wav"></audio>
-<audio src="re/slide.wav"></audio>
-<audio src="re/slide.wav"></audio>
-<audio src="re/slide.wav"></audio>
-<audio src="re/clang.wav"></audio>
-<audio src="re/clang.wav"></audio>
-<audio src="re/clang.wav"></audio>
-<audio src="re/coin.wav"></audio>
-<audio src="re/coin.wav"></audio>
-<audio src="re/coin.wav"></audio>
-<audio src="re/coin2.wav"></audio>
-<audio src="re/coin2.wav"></audio>
-<audio src="re/coin2.wav"></audio>
-<audio src="re/coin3.wav"></audio>
-<audio src="re/coin3.wav"></audio>
-<audio src="re/coin3.wav"></audio>
-<audio src="re/coin4.wav"></audio>
-<audio src="re/coin4.wav"></audio>
-<audio src="re/coin4.wav"></audio>
-<audio src="re/kick.wav"></audio>
-<audio src="re/kick.wav"></audio>
-<audio src="re/kick.wav"></audio>
-<audio src="re/kick.wav"></audio>
-<audio src="re/kick.wav"></audio>
-<audio src="re/kick2.wav"></audio>
-<audio src="re/kick2.wav"></audio>
-<audio src="re/kick2.wav"></audio>
-<audio src="re/kick2.wav"></audio>
-<audio src="re/kick2.wav"></audio>
-<audio src="re/kick3.wav"></audio>
-<audio src="re/kick3.wav"></audio>
-<audio src="re/kick3.wav"></audio>
-<audio src="re/kick3.wav"></audio>
-<audio src="re/kick3.wav"></audio>
-<audio src="re/kick4.wav"></audio>
-<audio src="re/kick4.wav"></audio>
-<audio src="re/kick4.wav"></audio>
-<audio src="re/kick4.wav"></audio>
-<audio src="re/kick4.wav"></audio>
-<audio src="re/kick5.wav"></audio>
-<audio src="re/kick5.wav"></audio>
-<audio src="re/kick5.wav"></audio>
-<audio src="re/kick5.wav"></audio>
-<audio src="re/kick5.wav"></audio>
-<audio src="re/squish1.wav"></audio>
-<audio src="re/squish1.wav"></audio>
-<audio src="re/squish1.wav"></audio>
-<audio src="re/squish2.wav"></audio>
-<audio src="re/squish2.wav"></audio>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>formVerify</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        input, select, textarea{
+            width: 100%;
+            max-width: 100%;
+            height: 100%;
+            border: 1px solid #444;
+            font-size: 12px;
+            padding-left: 20px;
+            outline:none;
+        }
 
+        button{
+            width: 200px;
+            height: 30px;
+        }
+
+        .app {
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            text-align: center;
+        }
+
+        .container {
+            width: 85%;
+            height: auto;
+            margin: 0 auto;
+        }
+        .sidebar {
+            width: 15%;
+            height: 100%;
+            border-right: 1px solid #333;
+        }
+        .side-item {
+            text-align: center;
+        }
+
+        .fv-box {
+            width: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            -webkit-justify-content: space-between;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        .fv-con {
+            width: 48%;
+        }
+        .fv-title {
+            width: 450px;
+            font-size: 1.2rem;
+            text-align: left;
+        }
+        .fv-item{
+            width: 100%;
+            height: 30px;
+        }
+
+        /* 验证失败的样式 */
+        .ver-valid-error{
+            border-color: #dc0100;
+            padding-right: calc(1.5em + .75rem);
+            /*background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA8ElEQVQ4T6WTKw7CQBCGv20wBFkewaHpEbhCBQgwGLgBFyIgwBSDJZyAAwAWR8LLkRAEJUtbst3ukpDWdXb+b/6Z2RXk/EROPSnAGUYO7F1YmcA38EOouTBOzr+AEwwcmMgDAT0XFirkCt0QAhl7wbAK0zg3SrtD/QHrEDwdoooFbJ/g1+GQAsifKzSBQIXIeFJZionc7TItJAEdoiRmxBkHNoipstWBpRVjdaMDtYW4spyBZ3ORugcGcS+2+hnszyGqa9QTdbBxjWfoC5jZrGrb6ZRhmZnBBdpF2JTgaLrKR2gUoFWB+c8t/PPAcr/GN41xVxENeXHDAAAAAElFTkSuQmCC);*/
+            /*background-repeat: no-repeat;*/
+            /*background-position: center right calc(.375em + .1875rem);*/
+            /*background-size: calc(.75em + .375rem) calc(.75em + .375rem);*/
+        }
+
+        /* 验证成功的样式 */
+        .ver-valid-success{
+            border-color: #00a000;
+            padding-right: calc(1.5em + .75rem);
+            /*background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAz0lEQVQ4T8WSMQrCQBRE34I2HkUvkTOYJZWgkXQewngSG6uAlZWVnZWdaGVlZWUlFroYWSRkN9lAJEW2XJj3588fQcMnGuppAbCiz5uAkFi7/8+BFisSYEDKQkPqA0wxrJkgcwdLPMCjS8KIcylYW7yhhyTgZQJiBHPgRIfAgti2tzyRzHhkQ34r2BNyiP2/QyGJuJsO8wxckCwwwZ4PPiG34np2iEWITltwAHzGXF2lK1/BhhxRDIm4VDXWfcasLCkJU8dVDFr9HlRYaB/wBbUERBFq3OuBAAAAAElFTkSuQmCC);*/
+            /*background-repeat: no-repeat;*/
+            /*background-position: center right calc(.375em + .1875rem);*/
+            /*background-size: calc(.75em + .375rem) calc(.75em + .375rem);*/
+        }
+
+        /* 错误反馈的元素样式 */
+        .ver-invalid{
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-size: 60%;
+            line-height: 2;
+            color: #dc0000;
+            text-align: left;
+        }
+
+    </style>
+
+    <!--[if lt IE 9]>
+        <script>
+        alert("您的浏览器版本过低，请升级浏览器版本后查看！")
+        window.location.href='//cdn.dmeng.net/upgrade-your-browser.html?referrer='+location.href;
+        </script>
+    <![endif]-->
+</head>
+<body>
+<br/>
+<br/>
+<div id="app" class="app">
+    <!--<div class="sidebar">-->
+    <!--    <div class="side-item">纯英文</div>-->
+    <!--</div>-->
+    <div class="container" style="text-align: center;">
+
+        <!-- 纯英文 -->
+        <div class="fv-box">
+            <div class="fv-con">
+                <div class="fv-title">* 纯英文</div>
+                <div class="fv-item">
+                    <input ver-id="english1" type="text"/>
+                </div>
+            </div>
+            <div class="fv-con">
+                <div class="fv-title">纯英文</div>
+                <div class="fv-item">
+                    <input ver-id="english2" type="text"/>
+                </div>
+            </div>
+        </div>
+
+        <!-- 纯中文 -->
+        <div class="fv-box">
+            <div class="fv-con">
+                <div class="fv-title">* 纯中文汉字</div>
+                <div class="fv-item">
+                    <input ver-id="chinese1" type="text"/>
+                </div>
+            </div>
+            <div class="fv-con">
+                <div class="fv-title">纯中文汉字</div>
+                <div class="fv-item">
+                    <input ver-id="chinese2" type="text"/>
+                </div>
+            </div>
+        </div>
+
+        <!-- 中文及字符 -->
+        <div class="fv-box">
+            <div class="fv-con">
+                <div class="fv-title">* 中文及字符</div>
+                <div class="fv-item">
+                    <input ver-id="chineseChar1" type="text"/>
+                </div>
+            </div>
+            <div class="fv-con">
+                <div class="fv-title">中文及字符</div>
+                <div class="fv-item">
+                    <input ver-id="chineseChar2" type="text"/>
+                </div>
+            </div>
+        </div>
+
+        <!-- 字符验证1 -->
+        <div class="fv-box">
+            <div class="fv-con">
+                <div class="fv-title">* 字符验证（中、英文、数字、"-_"）</div>
+                <div class="fv-item">
+                    <input ver-id="stringCheck1" type="text"/>
+                </div>
+            </div>
+            <div class="fv-con">
+                <div class="fv-title">字符验证（中、英文、数字、"-_"）</div>
+                <div class="fv-item">
+                    <input ver-id="stringCheck2" type="text"/>
+                </div>
+            </div>
+        </div>
+
+        <!-- 字符验证2 -->
+        <div class="fv-box">
+            <div class="fv-con">
+                <div class="fv-title">* 非空验证（可限制长度）</div>
+                <div class="fv-item">
+                    <textarea ver-id="notNull1"></textarea>
+                </div>
+            </div>
+            <div class="fv-con">
+                <div class="fv-title">非空验证（可限制长度）</div>
+                <div class="fv-item">
+                    <textarea ver-id="notNull2"></textarea>
+                </div>
+            </div>
+        </div>
+        <!-- 字符数字 -->
+        <div class="fv-box">
+            <div class="fv-con">
+                <div class="fv-title">* 字符数字（String）</div>
+                <div class="fv-item">
+                    <input ver-id="digit1" type="text"/>
+                </div>
+            </div>
+            <div class="fv-con">
+                <div class="fv-title">字符数字（String）</div>
+                <div class="fv-item">
+                    <input ver-id="digit2" type="text"/>
+                </div>
+            </div>
+        </div>
+
+        <!-- 电话 -->
+        <div class="fv-box">
+            <div class="fv-con">
+                <div class="fv-title">* 电话</div>
+                <div class="fv-item">
+                    <input ver-id="phone1" type="text"/>
+                </div>
+            </div>
+            <div class="fv-con">
+                <div class="fv-title">电话/手机</div>
+                <div class="fv-item">
+                    <input ver-id="phone2" type="text"/>
+                </div>
+            </div>
+        </div>
+
+        <!-- 手机 -->
+        <div class="fv-box">
+            <div class="fv-con">
+                <div class="fv-title">* 电话/手机</div>
+                <div class="fv-item">
+                    <input ver-id="mobile1" type="text"/>
+                </div>
+            </div>
+            <div class="fv-con">
+                <div class="fv-title">电话/手机</div>
+                <div class="fv-item">
+                    <input ver-id="mobile2" type="text"/>
+                </div>
+            </div>
+        </div>
+
+        <!-- 电话/手机 -->
+        <div class="fv-box">
+            <div class="fv-con">
+                <div class="fv-title">* 电话/手机</div>
+                <div class="fv-item">
+                    <input ver-id="telephone1" type="text"/>
+                </div>
+            </div>
+            <div class="fv-con">
+                <div class="fv-title">电话/手机</div>
+                <div class="fv-item">
+                    <input ver-id="telephone2" type="text"/>
+                </div>
+            </div>
+        </div>
+
+        <!-- 邮编 -->
+        <div class="fv-box">
+            <div class="fv-con">
+                <div class="fv-title">* 邮政编码</div>
+                <div class="fv-item">
+                    <input ver-id="zipCode1" type="text"/>
+                </div>
+            </div>
+            <div class="fv-con">
+                <div class="fv-title">邮政编码</div>
+                <div class="fv-item">
+                    <input ver-id="zipCode2" type="text"/>
+                </div>
+            </div>
+        </div>
+
+        <!-- select -->
+        <div class="fv-box">
+            <div class="fv-con">
+                <div class="fv-title">* 下拉列表</div>
+                <div class="fv-item">
+                    <select name="" ver-id="select1">
+                        <option value="">请选择</option>
+                        <option value="1">北京</option>
+                        <option value="2">上海</option>
+                    </select>
+                </div>
+            </div>
+            <div class="fv-con">
+                <div class="fv-title">下拉列表</div>
+                <div class="fv-item">
+                    <select name="" ver-id="select2">
+                        <option value="">请选择</option>
+                        <option value="1">北京</option>
+                        <option value="2">上海</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- 密码 -->
+        <div class="fv-box">
+            <div class="fv-con">
+                <div class="fv-title">* 密码</div>
+                <div class="fv-item">
+                    <input ver-id="password1" type="text"/>
+                </div>
+            </div>
+            <div class="fv-con">
+                <div class="fv-title">密码</div>
+                <div class="fv-item">
+                    <input ver-id="password2" type="text"/>
+                </div>
+            </div>
+        </div>
+
+        <!-- 邮箱 -->
+        <div class="fv-box">
+            <div class="fv-con">
+                <div class="fv-title">* 电子邮箱</div>
+                <div class="fv-item">
+                    <input ver-id="email1" type="text"/>
+
+                </div>
+            </div>
+            <div class="fv-con">
+                <div class="fv-title">电子邮箱</div>
+                <div class="fv-item">
+                    <input ver-id="email2"/>
+                </div>
+            </div>
+        </div>
+
+        <!-- 整型 -->
+        <div class="fv-box">
+            <div class="fv-con">
+                <div class="fv-title">* 整数型（Number）</div>
+                <div class="fv-item">
+                    <input ver-id="number1" type="number" />
+                </div>
+            </div>
+            <div class="fv-con">
+                <div class="fv-title">数字（Number）</div>
+                <div class="fv-item">
+                    <input ver-id="number2" />
+                </div>
+            </div>
+        </div>
+
+
+        <!-- URL -->
+        <div class="fv-box">
+            <div class="fv-con">
+                <div class="fv-title">* 网址</div>
+                <div class="fv-item">
+                    <input ver-id="url1" />
+                </div>
+            </div>
+            <div class="fv-con">
+                <div class="fv-title">网址</div>
+                <div class="fv-item">
+                    <input ver-id="url2"/>
+                </div>
+            </div>
+        </div>
+
+        <!-- 身份证 -->
+        <div class="fv-box">
+            <div class="fv-con">
+                <div class="fv-title">* 身份证</div>
+                <div class="fv-item">
+                    <input ver-id="idCard1" />
+                </div>
+            </div>
+            <div class="fv-con">
+                <div class="fv-title">身份证</div>
+                <div class="fv-item">
+                    <input ver-id="idCard2" />
+                </div>
+            </div>
+        </div>
+
+
+        <button ver-submit type="button">提交</button>
+    </div>
+</div>
+<script src="./formVerify-1.0.5.js"></script>
+<!--<script src="./dist/formVerify-1.0.5.min.js"></script>-->
+<script>
+    var test = new Ver({
+        el:'#app',
+        data: {
+            'english1': {
+                required: true,
+                type: 'english',
+                feedback: '不能为空！',
+                placeholder: '请输入英文',
+                maxlength: 10,
+                minlength: 0
+            },
+            'english2': {
+                required: false,
+                type: 'english',
+                feedback: '不能为空！',
+                placeholder: '请输入英文（选填）',
+                maxlength: 10,
+                minlength: 0
+            },
+            'chinese1': {
+                required: true,
+                type: 'chinese',
+                feedback: '不能为空！',
+                placeholder: '请输入中文字符',
+                maxlength: 10,
+                minlength: 0
+            },
+            'chinese2': {
+                required: false,
+                type: 'chinese',
+                feedback: '不能为空！',
+                placeholder: '请输入中文字符（选填）',
+                maxlength: 10,
+                minlength: 0
+            },
+            'chineseChar1': {
+                required: true,
+                type: 'chineseChar',
+                feedback: '不能为空！',
+                placeholder: '请输入中文字符',
+                maxlength: 10,
+                minlength: 0
+            },
+            'chineseChar2': {
+                required: false,
+                type: 'chineseChar',
+                feedback: '不能为空！',
+                placeholder: '请输入中文字符（选填）',
+                maxlength: 10,
+                minlength: 0
+            },
+            'stringCheck1': {
+                required: true,
+                type: 'stringCheck',
+                feedback: '不能为空！',
+                placeholder: '请输入字符',
+                maxlength: 10,
+                minlength: 0
+            },
+            'stringCheck2': {
+                required: false,
+                type: 'stringCheck',
+                // feedback: '不能为空！',
+                placeholder: '请输入字符（选填）',
+                maxlength: 10,
+                minlength: 0
+            },
+            'notNull1': {
+                required: true,
+                type: 'notNull',
+                feedback: '不能为空！',
+                placeholder: '请输入字符',
+                maxlength: 10,
+                minlength: 0
+            },
+            'notNull2': {
+                required: false,
+                type: 'notNull',
+                // feedback: '不能为空！',
+                placeholder: '请输入字符（选填）',
+                maxlength: 10,
+                minlength: 0
+            },
+            'digit1': {
+                required: true,
+                type: 'digit',
+                maxlength: 10,
+                minlength: 5,
+                feedback: '不能为空！',
+                placeholder: '请输入数字'
+            },
+            'digit2': {
+                required: false,
+                type: 'digit',
+                maxlength: 10,
+                minlength: 0,
+                feedback: '不能为空！',
+                placeholder: '请输入数字（选填）'
+            },
+            'telephone1': {
+                required: true,
+                type: 'telephone',
+                feedback: '不能为空！',
+                placeholder: '请输入电话/手机号码'
+            },
+            'telephone2': {
+                required: false,
+                type: 'telephone',
+                feedback: '不能为空！',
+                placeholder: '请输入电话/手机号码（选填）'
+            },
+            'phone1': {
+                required: true,
+                type: 'phone',
+                feedback: '不能为空！',
+                placeholder: '请输入电话号码'
+            },
+            'phone2': {
+                required: false,
+                type: 'phone',
+                feedback: '不能为空！',
+                placeholder: '请输入电话号码（选填）'
+            },
+            'mobile1': {
+                required: true,
+                type: 'mobile',
+                feedback: '不能为空！',
+                placeholder: '请输入手机号码'
+            },
+            'mobile2': {
+                required: false,
+                type: 'mobile',
+                feedback: '不能为空！',
+                placeholder: '请输入手机号码（选填）'
+            },
+            'zipCode1': {
+                required: true,
+                type: 'zipCode',
+                feedback: '不能为空！',
+                placeholder: '请输入邮编'
+            },
+            'zipCode2': {
+                required: false,
+                type: 'zipCode',
+                feedback: '不能为空！',
+                placeholder: '请输入邮编（选填）'
+            },
+            'select1': {
+                required: true,
+                type: 'select',
+                feedback: '必须项，请选择！'
+            },
+            'select2': {
+                required: false,
+                type: 'select',
+            },
+            'password1': {
+                required: true,
+                type: 'password',
+                feedback: '不能为空！',
+                placeholder: '请输入密码',
+                maxlength: 16,
+                minlength: 6,
+            },
+            'password2': {
+                required: false,
+                type: 'password',
+                feedback: '只能以字母开头, 只能包含字母、数字和下划线！',
+                placeholder: '请输入密码（选填）',
+                maxlength: 16,
+                minlength: 6,
+            },
+            'number1': {
+                required: true,
+                type: 'integer',
+                feedback: '必填项不能为空！',
+                placeholder: '请输入整数',
+                max: 100,
+                min: 0,
+            },
+            'number2': {
+                required: false,
+                type: 'integer',
+                feedback: '',
+                placeholder: '请输入整数（选填）',
+                max: 10,
+                min: -2,
+            },
+            'email1': {
+                required: true,
+                type: 'email',
+                feedback: '请输入正确邮箱！',
+                placeholder: '请输入邮箱'
+            },
+            'email2': {
+                required: false,
+                type: 'email',
+                feedback: '请输入正确邮箱！',
+                placeholder: '请输入邮箱（选填）'
+            },
+            'url1': {
+                required: true,
+                type: 'url',
+                feedback: '不能为空！',
+                placeholder: '请输入URL（选填）',
+            },
+            'url2': {
+                required: false,
+                type: 'url',
+                feedback: '不能为空',
+                placeholder: '请输入URL（选填）'
+            },
+            'idCard1': {
+                required: true,
+                type: 'idCard',
+                feedback: '不能为空！',
+                placeholder: '请输入身份证号（选填）',
+            },
+            'idCard2': {
+                required: false,
+                type: 'idCard',
+                feedback: '不能为空',
+                placeholder: '请输入身份证号（选填）'
+            }
+
+        },
+        success:function(res) {
+            console.log('success')
+            console.log(res)
+        },
+        fail:function (err) {
+            console.log('fail')
+            console.log(err)
+        }
+
+    });
+
+
+</script>
 </body>
 </html>
